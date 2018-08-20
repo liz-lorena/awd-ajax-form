@@ -1,0 +1,19 @@
+#errors {
+    color: red;
+    white-space: pre-line;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.date {
+    font-style: italic;
+}
+
+.favs {
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    padding: 3px;
+}

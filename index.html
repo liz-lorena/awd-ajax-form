@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX Testing</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Assignment 4</h1>
+        <span style="color: red">Fields marked * are required</span>
+
+        <div class="row">
+            <br>
+            <div class="col-md-6">
+
+                <form id="getposts_form" role="form">
+
+                    <div class="form-group">
+                        <label for="startdate">Start Date</label><span style="color: red">*</span>
+                        <input type="text" class="form-control" id="startdate" name="startdate" placeholder="MM/DD/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enddate">End Date</label><span style="color: red">*</span>
+                        <input type="text" class="form-control" id="enddate" name="enddate" placeholder="MM/DD/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favorites">Number of Favorites</label>
+                        <select id="favorites" name="favorites" class="form-control">
+                                <option value="0">Any number</option>
+                                <option value="50">50+</option>
+                                <option value="100">100+</option>
+                                <option value="200">200+</option>
+                                <option value="500">500+</option>
+                            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter a string of text to search for in post titles">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="body">Body</label>
+                        <input type="text" class="form-control" id="body" name="body" placeholder="Enter a string of text to search for in the body of posts">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sort">Sort</label>
+                        <select id="sort" name="sort" class="form-control">
+                                <option value="">No sort</option>
+                                <option value="date">Date</option>
+                                <option value="title">Title</option>
+                                <option value="favorites">Favorites</option>
+                            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sort_descending">Sort Descending</label>
+                        <select id="sort_descending" name="sort_descending" class="form-control">
+                                <option value="">Descending sort?</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="limit">Limit Results</label>
+                        <select id="limit" name="limit" class="form-control">
+                                <option value="0">No limit</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                            </select>
+                    </div>
+
+                    <button id="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+
+            </div>
+            <div class="col-md-6">
+
+                <h2>Errors:</h2>
+                <div id="errors"></div>
+
+                <h2>Output:</h2>
+                <div id="output"></div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="ajaxIndicator" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;">
+                        <p>Please wait ...</p>
+                        <p>
+                            <img src="ajax-loader.gif" />
+                        </p>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+</body>
+
+</html>
